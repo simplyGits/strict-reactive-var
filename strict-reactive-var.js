@@ -8,6 +8,9 @@ SReactiveVar = function (pattern, val) {
 	if (!(this instanceof SReactiveVar)) {
 		throw new TypeError('SReactiveVar can only be initilized with `new`')
 	}
+	if (pattern === undefined) {
+		throw new ReferenceError('`pattern` is required')
+	}
 
 	this._pattern = pattern
 	this._reactiveVar = new ReactiveVar(val)

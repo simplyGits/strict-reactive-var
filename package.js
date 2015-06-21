@@ -1,6 +1,6 @@
 Package.describe({
 	name: 'simply:strict-reactive-var',
-	version: '1.0.0',
+	version: '1.0.1',
 	summary: 'Thin strictly type checking wrapper around reactive-var.',
 	git: 'https://github.com/simplyGits/strict-reactive-var',
 	documentation: 'README.md',
