@@ -21,7 +21,7 @@ Tinytest.add('check types', function (test) {
 	try {
 		val.set('5')
 	} catch (e) {
-		// we should erorr and hit this line.
+		// we should error and hit this line.
 		error = e
 	}
 	test.isNotNull(error)
