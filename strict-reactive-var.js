@@ -4,16 +4,18 @@
  * @author simply
  */
 
-SReactiveVar = function (pattern, val) {
+SReactiveVar = function (pattern /*, args */) {
+	var args = [].slice.call(arguments, 1)
+
 	if (!(this instanceof SReactiveVar)) {
-		return new SReactiveVar(pattern, val)
+		return new SReactiveVar(arguments)
 	}
 	if (pattern === undefined) {
 		throw new ReferenceError('`pattern` is required')
 	}
 
 	this._pattern = pattern
-	this._reactiveVar = new ReactiveVar(val)
+	this._reactiveVar = ReactiveVar.apply(null, args)
 }
 
 SReactiveVar.prototype.get = function () {
