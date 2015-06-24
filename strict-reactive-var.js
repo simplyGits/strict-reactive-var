@@ -6,7 +6,7 @@
 
 SReactiveVar = function (pattern, val) {
 	if (!(this instanceof SReactiveVar)) {
-		throw new TypeError('SReactiveVar can only be initialized with `new`')
+		return new SReactiveVar(pattern, val)
 	}
 	if (pattern === undefined) {
 		throw new ReferenceError('`pattern` is required')
