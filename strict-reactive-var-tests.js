@@ -1,3 +1,8 @@
+Tinytest.add('be able to initialized with and without `new`', function (test) {
+	test.instanceOf(new SReactiveVar(null), SReactiveVar);
+	test.instanceOf(SReactiveVar(null), SReactiveVar);
+})
+
 Tinytest.add('set values and be reactive', function (test) {
 	var val = new SReactiveVar(Number, 0)
 
