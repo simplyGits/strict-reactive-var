@@ -8,7 +8,11 @@ SReactiveVar = function (pattern /*, args */) {
 	var args = [].slice.call(arguments, 1)
 
 	if (!(this instanceof SReactiveVar)) {
-		return new SReactiveVar(arguments)
+		var x = function (args) {
+			return SReactiveVar.apply(this, args)
+		}
+		x.prototype = SReactiveVar.prototype
+		return new x(arguments)
 	}
 	if (pattern === undefined) {
 		throw new ReferenceError('`pattern` is required')
