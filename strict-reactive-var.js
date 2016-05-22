@@ -1,4 +1,4 @@
-/*
+/**
  * Thin strictly type checking wrapper around reactive-var.
  * @module strict-reactive-var
  * @author simply
