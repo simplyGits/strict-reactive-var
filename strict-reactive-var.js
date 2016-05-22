@@ -4,7 +4,7 @@
  * @author simply
  */
 
-SReactiveVar = function (pattern /*, args */) {
+const SReactiveVar = function (pattern /*, args */) {
 	var args = [].slice.call(arguments, 1)
 
 	if (!(this instanceof SReactiveVar)) {
@@ -30,3 +30,5 @@ SReactiveVar.prototype.set = function (val) {
 	check(val, this._pattern)
 	this._reactiveVar.set(val)
 }
+
+export default SReactiveVar
